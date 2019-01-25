@@ -1,5 +1,11 @@
 #!perl
 
+# DATE
+# VERSION
+
+use strict;
+use warnings;
+
 use Getopt::Long::Modern;
 
 our $opt_times = 1;
@@ -11,6 +17,7 @@ for my $item (@ARGV) {
 }
 
 # ABSTRACT: Increment variable using Perl's auto-increment notion
+# PODNAME:
 
 =head1 SYNOPSIS
 

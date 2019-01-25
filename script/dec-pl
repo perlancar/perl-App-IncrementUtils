@@ -1,21 +1,31 @@
 #!perl
 
-use Data::Decrement qw(decrement);
+# DATE
+# VERSION
+
+use strict;
+use warnings;
+
+use Data::Decrement qw(decr);
 use Getopt::Long::Modern;
 
 our $opt_times = 1;
 GetOptions('times|n=i');
 
 for my $item (@ARGV) {
-    $item = decrement($item) for 1..$opt_times;
+    $item = decr($item) for 1..$opt_times;
     print "$item\n";
 }
 
 # ABSTRACT: Decrement variable using Perl's auto-decrement notion
+# PODNAME:
 
 =head1 SYNOPSIS
 
- % dec-pl 2 10 b
+ % dec-pl B b00 2.3
+ A
+ a99
+ 1.3
 
 
 =head1 DESCRIPTION
